@@ -1,0 +1,20 @@
+Context: {context}
+
+Instructions:
+Your task is to generate questions answer pairs about character: {character} from book: {book} given the above chunk of the book. You should focus on understanding aspects of the character (e.g., role, relationships, personality, events) that are mentioned in the context. Each qa-pair should be labeled as role, relationship, personality, event or other. We provide the definitions for these bellow.
+
+Definitions:
+Role: defines what part the character plays in the story, narrator, major/minor character.
+Relationship: connections the character has with others, such as friendships or family ties.
+Personality: character’s behavior, traits, and attributes.
+Event: actions and decisions the character is involved in throughout the story.
+Other: any other fact that doesn’t belong to the above categories.
+
+Output format:
+Q1: <question> E1: <explanation> A1: <answer> T1: <type>
+Q2: <question> E2: <explanation> A2: <answer> T2: <type>
+...
+
+Generate an explanation, 1-2 sentences that fully justufies your answer, do not simple repeat the answer. Type of qa has to be one of Role, Relationship, Personality, Event or Other. The answer should be short 1-4 words.
+Generate QA-pairs only related to character: {character}. Generate QA-pairs only for information mentioned in the provided context. Do not include unanswerd questions. 
+The questions has to mention the name of the character: {character}. Do not generate repetitive QA-pairs with same answer. If the character is not mentioned simple return None.

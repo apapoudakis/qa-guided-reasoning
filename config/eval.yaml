@@ -1,0 +1,25 @@
+data_params:
+  data_path: data/processed/bookworm_descr/full_book
+  # hierarchical: prompts/bookworm/character_description/hier
+  # incremental: prompts/bookworm/character_description/incremental/
+  prompt_path: prompts/bookworm/character_description/main/description_prompt.txt
+  qa_data_path: null  # Directory containing the combined QA preds.jsonl.
+eval_params:
+  checkpoint_path: null
+  model_name: Qwen/Qwen3-8B
+  save_path: experiments/bookworm/description/qwen_3_8b/lead_128k/test
+  method: truncate  # truncate, no_context, hierarchical, incremental
+  truncate_length: 110000  # Context limit; for hierarchical/incremental use 16384.
+  split: test
+  enable_yarn: true  # Extend the standard Qwen3 context to 128k; disable for 16k/32k inputs.
+  built_in_thinking: false
+  guided_reasoning: false  # Set true and supply qa_data_path to insert QA traces.
+  hier_merge_thinking: false
+generate_params:
+  engine_seed: 0
+  seeds: [0, 1, 2, 3]
+  temperature: 0.4
+  min_new_tokens: 60
+  max_new_tokens: 140
+  chunk_max_tokens: 2048  # Hierarchical chunk summaries and all incremental steps.
+  frequency_penalty: 0.2

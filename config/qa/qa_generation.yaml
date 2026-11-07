@@ -1,0 +1,19 @@
+data_params:
+  data_path: data/processed/bookworm_descr/full_book
+  prompt_path: prompts/bookworm/character_description/reasoning/qg_explanation_per_chunk_type.txt
+eval_params:
+  checkpoint_path: null  # Set to the trained QA reasoner's HF checkpoint.
+  model_name: Qwen/Qwen3-8B
+  save_path: experiments/bookworm/description/qwen_3_8b/lead_128k/test/reasoning
+  segment_length: 16384
+  truncate_length: 110000  # Match description context; use 0 for whole-book chunked generation.
+  split: test
+  thinking: false
+  enable_yarn: false  # Each reasoner input is only one 16k chunk.
+generate_params:
+  engine_seed: 0
+  seeds: [0, 1, 2, 3]
+  temperature: 0.4
+  min_new_tokens: 1
+  max_new_tokens: 2048
+  frequency_penalty: 0.2

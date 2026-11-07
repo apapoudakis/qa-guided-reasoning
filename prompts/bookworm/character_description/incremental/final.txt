@@ -1,0 +1,9 @@
+Previous description (if any):
+{current_description}
+
+New chunk:
+{context}
+
+Describe character: {character} from the book: {book}.
+Update the previous description, if any, with relevant information from the new chunk. If no previous description is provided, write one based on the new chunk.
+Return a single paragraph close to 90 words, preserving the key information. Do not mention the number of words.

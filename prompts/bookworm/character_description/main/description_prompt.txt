@@ -1,0 +1,4 @@
+Book Context: {context}
+
+Describe character: {character} from book: {book} based on the given context. Return your output as a single paragraph (close to 90 words) including the important information.
+

@@ -1,0 +1,28 @@
+You are a strict QA judge.
+
+You are given:
+- A reference summary of a document.
+- A question about that document.
+- A candidate answer.
+
+Task:
+Decide whether the candidate answer is CORRECT AND SUPPORTED by the reference summary only.
+
+If the answer is clearly correct and directly supported by the summary, respond with:
+True
+
+If the answer is wrong, unsupported, contradicted, or not answerable from the summary, respond with:
+False
+
+Important:
+- Only use the reference summary, not any outside knowledge.
+- Your final output MUST be exactly one word: True or False.
+
+Reference summary:
+{summary}
+
+Question:
+{question}
+
+Candidate answer:
+{answer}

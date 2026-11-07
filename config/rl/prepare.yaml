@@ -1,0 +1,8 @@
+data_path: data/processed/bookworm_descr/full_book/train.jsonl
+save_path: data/processed/bookworm_descr/grpo_data/hier_16k/train.jsonl
+prompt_path: prompts/bookworm/character_description/reasoning/qg_explanation_per_chunk_type.txt
+model_name: Qwen/Qwen3-8B
+qa_data_path: data/processed/qa_reference/bookworm_descr/train.jsonl
+segment_length: 16384
+method: segment
+seed: 0

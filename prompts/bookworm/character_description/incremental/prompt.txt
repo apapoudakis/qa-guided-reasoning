@@ -1,0 +1,8 @@
+Context: {context}
+
+Description from previous chunks: {current_description} 
+
+I provide you above a description of character: {character} from the previous chunks of the book: {book} and a new chunk.
+Update the description based on the provided new chunk if relevant information is mentioned. Including all the important information. 
+If there is no new information or the character is not mentioned simple rewrite the existing description that I provided you. 
+

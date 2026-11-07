@@ -1,0 +1,3 @@
+Book Chunk: {context}
+
+Describe character: {character} from book: {book} based on the given context. Include only the important information. If the character is not mentioned in this chunk just mention this in your output. Start describing directly.

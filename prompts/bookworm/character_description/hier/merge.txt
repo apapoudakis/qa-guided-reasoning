@@ -1,0 +1,3 @@
+I provide you with different descriptions of character: {character} from book: {book}. Each description is from a different chunk of the story. Generate an updated description of the character: {character} including only the important information from all these descriptions. Your output should be one paragraph (close to 90 words) so include only key information. Start describing directly.
+
+{context}

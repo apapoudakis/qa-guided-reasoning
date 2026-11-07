@@ -1,0 +1,3 @@
+Describe character: {character} from book: {book}. Return your output as a single paragraph (close to 90 words) including the important information.
+
+Output:

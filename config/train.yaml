@@ -1,0 +1,41 @@
+data_params:
+  data_path: "data/processed/bookworm_descr/full_book"
+  prompt_path: "prompts/bookworm/character_description/main/description_prompt.txt"
+  qa_data_path: null
+
+train_params:
+  model_name: "unsloth/Qwen3-8B"
+  max_input_length: 32768
+  truncate_length: 28000  # SFT retains its 32k training budget on full-book input.
+  batch_size: 8
+  lr: 1.0e-6    
+  seed: 0
+  id: 0
+  max_steps: 250
+  warm_up_steps: 20
+  logging_steps: 1
+  save_steps: 30
+  eval_steps: 30
+  weight_decay: 0.05
+  save_strategy: "steps"
+  gradient_accumulation_steps: 8
+  resume_from_checkpoint: False
+  apply_lora: True
+  save_vllm_format: True
+  lr_schedule: "linear"
+  label_smoothing: 0.0
+  thinking: False
+
+lora_params:
+  r: 128
+  lora_alpha: 256
+  lora_dropout: 0.1
+
+
+experiment_params:
+  model: "qwen_3_8b_fn"
+  experiment_name: "lead_32k_sft"
+  save_experiment: experiments/bookworm/description
+  num_workers: 8
+  wandb_project: "qa-guided-reasoning"
+  report_to: "none"

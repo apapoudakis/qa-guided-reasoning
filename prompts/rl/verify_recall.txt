@@ -1,0 +1,35 @@
+You are a strict QA judge.
+
+You are given:
+- A context text produced by a model.
+- A question with a candidate answer.
+
+Your task:
+Decide whether the candidate answer is CORRECT AND EXPLICITLY SUPPORTED by the context text.
+
+Definitions:
+- "Supported" means the context text clearly states or directly implies the answer.
+- If the context text does NOT mention the relevant facts, or is vague, generic, unrelated, or empty, then the answer is NOT supported.
+
+Output format:
+- If the answer is clearly correct AND directly supported by the context text, respond with exactly:
+True
+- Otherwise (wrong, unsupported, contradicted, only partially supported, or not answerable from the context), respond with exactly:
+False
+
+Important rules:
+- You MUST base your decision ONLY on the context text.
+- Ignore any outside knowledge or common sense.
+- If the answer is factually true in the real world but not supported by the context text, you MUST respond: False.
+- If the context text is very short, empty, "None", or unrelated to the question, you MUST respond: False.
+
+Context text:
+{qa_pairs}
+
+Evaluate the following question–answer pair as True or False, based ONLY on whether it is supported by the above context text.
+
+Question:
+{question}
+
+Candidate answer:
+{answer}
